@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Color Changing Website</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            transition: background-color 1s ease;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            
+            font-size: 36px;
+            font-weight: bold;
+            flex-direction: column;
+            background-color: rgb(0, 255, 170);
+            padding: 20px 20px 20px 20px;
+
+        }
+        button{
+            margin-left: 40%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p>Random Color Changing Website</p>
+        <button onclick="rand()">change color</button>
+        
+    </div>
+    
+    <script>
+        function rand(){
+            let Ran= Math.floor(Math.random()*12345678).toString(16);
+            let random="#" + Ran;
+            document.body.style.backgroundColor=random;
+        }
+        
+       
+    </script>
+</body>
+</html>
